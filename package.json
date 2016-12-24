@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rv out",
     "juice": "juice out/index.html out/index.html",
     "pug": "pug -D index.pug -o out",
     "sass": "node-sass --output-style compressed style.sass -o out",
