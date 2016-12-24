@@ -5,11 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "juice": "juice --css out/style.css out/index.html out/index.html",
     "pug": "pug -D index.pug -o out",
     "sass": "node-sass --output-style compressed style.sass -o out",
     "static": "cp -rv static/* out",
 
-    "build": "npm run pug && npm run sass && npm run static"
+    "build": "npm run pug && npm run sass && npm run juice && npm run static"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,7 @@
   },
   "homepage": "https://github.com/mrPjer/psegina.com#readme",
   "devDependencies": {
+    "juice": "4.0.2",
     "pug": "2.0.0-beta6",
     "pug-cli": "1.0.0-alpha6",
     "node-sass": "4.1.1"
