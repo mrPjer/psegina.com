@@ -6,12 +6,16 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rm -rv out",
+    "fonts": "cp -rv node_modules/font-awesome/fonts out",
     "juice": "juice out/index.html out/index.html",
     "pug": "pug -D index.pug -o out",
-    "sass": "node-sass --output-style compressed style.sass -o out",
+    "sass": "node-sass --include-path node_modules/font-awesome/scss/ --output-style compressed style.sass -o out",
     "static": "cp -rv static/* out",
 
-    "build": "npm run pug && npm run sass && npm run juice && npm run static"
+    "build": "npm run pug && npm run sass && npm run fonts && npm run static",
+    "serve": "serve out",
+    "watch": "watch 'npm run build' --ignoreDirectoryPattern='/out/'",
+    "dev": "concurrently --kill-others 'npm run watch' 'npm run serve'"
   },
   "repository": {
     "type": "git",
@@ -24,9 +28,13 @@
   },
   "homepage": "https://github.com/mrPjer/psegina.com#readme",
   "devDependencies": {
+    "concurrently": "3.1.0",
+    "font-awesome": "4.7.0",
     "juice": "4.0.2",
     "pug": "2.0.0-beta6",
     "pug-cli": "1.0.0-alpha6",
-    "node-sass": "4.1.1"
+    "node-sass": "4.1.1",
+    "serve": "2.1.2",
+    "watch": "1.0.1"
   }
 }
