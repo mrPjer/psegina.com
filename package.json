@@ -6,8 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "pug": "pug -D index.pug -o out",
+    "sass": "node-sass --output-style compressed style.sass -o out",
 
-    "build": "npm run pug"
+    "build": "npm run pug && npm run sass"
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,7 @@
   "homepage": "https://github.com/mrPjer/psegina.com#readme",
   "devDependencies": {
     "pug": "2.0.0-beta6",
-    "pug-cli": "1.0.0-alpha6"
+    "pug-cli": "1.0.0-alpha6",
+    "node-sass": "4.1.1"
   }
 }
