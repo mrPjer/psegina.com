@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "pug": "pug -D index.pug -o out"
+    "pug": "pug -D index.pug -o out",
+
+    "build": "npm run pug"
   },
   "repository": {
     "type": "git",
