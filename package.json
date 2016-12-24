@@ -1,0 +1,19 @@
+{
+  "name": "psegina.com",
+  "version": "1.0.0",
+  "description": "My personal website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrPjer/psegina.com.git"
+  },
+  "author": "Petar Šegina",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/mrPjer/psegina.com/issues"
+  },
+  "homepage": "https://github.com/mrPjer/psegina.com#readme"
+}
