@@ -13,6 +13,7 @@
     "static": "cp -rv static/* out",
 
     "build": "npm run pug && npm run sass && npm run fonts && npm run static",
+    "build:docker": "npm run clean && npm run build && docker build .",
     "serve": "serve out",
     "watch": "watch 'npm run build' --ignoreDirectoryPattern='/out/'",
     "dev": "concurrently --kill-others 'npm run watch' 'npm run serve'"
