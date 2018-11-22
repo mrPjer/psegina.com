@@ -11,7 +11,6 @@
     "pug": "pug -D index.pug -o out",
     "sass": "node-sass --include-path node_modules/font-awesome/scss/ --output-style compressed style.sass -o out",
     "static": "cp -rv static/* out",
-
     "build": "npm run pug && npm run sass && npm run fonts && npm run static",
     "build:docker": "npm run clean && npm run build && docker build .",
     "serve": "serve out",
@@ -34,7 +33,7 @@
     "juice": "4.0.2",
     "pug": "2.0.0-beta6",
     "pug-cli": "1.0.0-alpha6",
-    "node-sass": "4.5.3",
+    "node-sass": "4.10.0",
     "serve": "2.1.2",
     "watch": "1.0.1"
   }
