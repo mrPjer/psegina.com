@@ -31,7 +31,7 @@
     "concurrently": "3.1.0",
     "font-awesome": "4.7.0",
     "juice": "4.0.2",
-    "node-sass": "4.13.0",
+    "node-sass": "5.0.0",
     "pug": "^2.0.4",
     "pug-cli": "1.0.0-alpha6",
     "serve": "2.1.2",
