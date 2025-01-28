@@ -9,7 +9,7 @@
     "fonts": "cp -rv node_modules/font-awesome/fonts out",
     "juice": "juice out/index.html out/index.html",
     "pug": "pug -D index.pug -o out",
-    "sass": "node-sass --include-path node_modules/font-awesome/scss/ --output-style compressed style.sass -o out",
+    "sass": "sass --load-path node_modules/font-awesome/scss/ --style compressed style.sass out/style.css",
     "static": "cp -rv static/* out",
     "build": "npm run pug && npm run sass && npm run fonts && npm run static",
     "build:docker": "npm run clean && npm run build && docker build .",
@@ -31,9 +31,9 @@
     "concurrently": "3.1.0",
     "font-awesome": "4.7.0",
     "juice": "4.0.2",
-    "node-sass": "5.0.0",
     "pug": "^2.0.4",
     "pug-cli": "1.0.0-alpha6",
+    "sass": "1.83.4",
     "serve": "2.1.2",
     "watch": "1.0.1"
   }
